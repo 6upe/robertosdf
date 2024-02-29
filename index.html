@@ -65,7 +65,7 @@
               </a>
               <a href="" class="contact_link3">
                 <i class="fa fa-envelope" aria-hidden="true"></i>
-                <span> info@robertosdf.org </span>
+                <span> info@robertosavedreams.org </span>
               </a>
             </div>
           </div>
@@ -75,7 +75,7 @@
             <nav class="navbar navbar-expand-lg custom_nav-container">
               <a class="navbar-brand" href="index.html">
                 <span>
-                  <span style="background-color: white; border-radius: 50%"
+                  <span 
                     ><img src="./images/rsdflogo.png" width="30px" alt=""
                   /></span>
 
@@ -151,8 +151,21 @@
                         Services.
                       </p>
                       <div class="btn-box">
-                        <a href="" class="btn-1"> See Profile </a>
-                        <a href="" class="btn-2">Donate</a>
+                        <div class="btn-box">
+                          <a
+                            href="./RSDF - PROFILE - english.pdf"
+                            class="btn-1"
+                            download
+                            >See Profile</a
+                          >
+                          <a
+                            href="#"
+                            class="btn-2"
+                            data-toggle="modal"
+                            data-target="#donationModal"
+                            >Donate</a
+                          >
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -174,14 +187,26 @@
                         Lives and giving hope).
                       </p>
                       <div class="btn-box">
-                        <a href="" class="btn-1"> See Profile </a>
-                        <a href="" class="btn-2">Donate</a>
+                        <a
+                          href="./RSDF - PROFILE - english.pdf"
+                          class="btn-1"
+                          download
+                          >See Profile</a
+                        >
+                        <a
+                          href="#"
+                          class="btn-2"
+                          data-toggle="modal"
+                          data-target="#donationModal"
+                          >Donate</a
+                        >
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
+
             <div class="carousel-item">
               <div class="container">
                 <div class="row">
@@ -200,8 +225,19 @@
                         development of our communities.
                       </p>
                       <div class="btn-box">
-                        <a href="" class="btn-1"> See Profile </a>
-                        <a href="" class="btn-2">Donate</a>
+                        <a
+                          href="./RSDF - PROFILE - english.pdf"
+                          class="btn-1"
+                          download
+                          >See Profile</a
+                        >
+                        <a
+                          href="#"
+                          class="btn-2"
+                          data-toggle="modal"
+                          data-target="#donationModal"
+                          >Donate</a
+                        >
                       </div>
                     </div>
                   </div>
@@ -209,6 +245,12 @@
               </div>
             </div>
           </div>
+
+
+
+
+
+
           <div class="container idicator_container">
             <ol class="carousel-indicators">
               <li
@@ -905,7 +947,7 @@
     </section>
     <!-- contact section -->
 
-    <section class="contact_section layout_padding">
+    <section id="contact" class="contact_section layout_padding">
       <div class="contact_bg_box">
         <div class="img-box">
           <img src="images/contact-bg.jpg" alt="" />
@@ -922,16 +964,37 @@
                 <div class="contact_form-container">
                   <div>
                     <div>
-                      <input type="text" placeholder="Full Name" id="fullName" required />
+                      <input
+                        type="text"
+                        placeholder="Full Name"
+                        id="fullName"
+                        required
+                      />
                     </div>
                     <div>
-                      <input type="email" placeholder="Email" id="email" required />
+                      <input
+                        type="email"
+                        placeholder="Email"
+                        id="email"
+                        required
+                      />
                     </div>
                     <div>
-                      <input type="text" placeholder="Phone Number" id="phoneNumber" required />
+                      <input
+                        type="text"
+                        placeholder="Phone Number"
+                        id="phoneNumber"
+                        required
+                      />
                     </div>
                     <div class="">
-                      <input type="text" placeholder="Message" class="message_input" id="message" required />
+                      <input
+                        type="text"
+                        placeholder="Message"
+                        class="message_input"
+                        id="message"
+                        required
+                      />
                     </div>
                     <div class="btn-box">
                       <button type="submit">Send</button>
@@ -939,37 +1002,45 @@
                   </div>
                 </div>
               </form>
-              
-              <script>
-                document.getElementById("contactForm").addEventListener("submit", function(event) {
-                  event.preventDefault(); // Prevent the form from submitting normally
-              
-                  // Get input values
-                  var fullName = document.getElementById("fullName").value;
-                  var email = document.getElementById("email").value;
-                  var phoneNumber = document.getElementById("phoneNumber").value;
-                  var message = document.getElementById("message").value;
-              
-                  // Compile message
-                  var whatsappMessage = "Dear Dr. Roberto,\n\n";
-                  whatsappMessage += "I would like to reach out to you from the Website:\n\n";
-                  whatsappMessage += "Full Name: " + fullName + "\n";
-                  whatsappMessage += "Email Address: " + email + "\n";
-                  whatsappMessage += "Phone Number: " + phoneNumber + "\n\n";
-                  whatsappMessage += "Message:\n" + message + "\n\n";
-                  whatsappMessage += "Thank you for your attention to this matter.\n\n";
-                  whatsappMessage += "Yours sincerely,\n" + fullName;
 
-              
-                  // Encode message for URL
-                  var encodedMessage = encodeURIComponent(whatsappMessage);
-              
-                  // WhatsApp number
-                  var whatsappNumber = "+244930731304";
-              
-                  // Redirect to WhatsApp with pre-filled message
-                  window.location.href = "https://api.whatsapp.com/send?phone=" + whatsappNumber + "&text=" + encodedMessage;
-                });
+              <script>
+                document
+                  .getElementById("contactForm")
+                  .addEventListener("submit", function (event) {
+                    event.preventDefault(); // Prevent the form from submitting normally
+
+                    // Get input values
+                    var fullName = document.getElementById("fullName").value;
+                    var email = document.getElementById("email").value;
+                    var phoneNumber =
+                      document.getElementById("phoneNumber").value;
+                    var message = document.getElementById("message").value;
+
+                    // Compile message
+                    var whatsappMessage = "Dear Dr. Roberto,\n\n";
+                    whatsappMessage +=
+                      "I would like to reach out to you from the Website:\n\n";
+                    whatsappMessage += "Full Name: " + fullName + "\n";
+                    whatsappMessage += "Email Address: " + email + "\n";
+                    whatsappMessage += "Phone Number: " + phoneNumber + "\n\n";
+                    whatsappMessage += "Message:\n" + message + "\n\n";
+                    whatsappMessage +=
+                      "Thank you for your attention to this matter.\n\n";
+                    whatsappMessage += "Yours sincerely,\n" + fullName;
+
+                    // Encode message for URL
+                    var encodedMessage = encodeURIComponent(whatsappMessage);
+
+                    // WhatsApp number
+                    var whatsappNumber = "+244930731304";
+
+                    // Redirect to WhatsApp with pre-filled message
+                    window.location.href =
+                      "https://api.whatsapp.com/send?phone=" +
+                      whatsappNumber +
+                      "&text=" +
+                      encodedMessage;
+                  });
               </script>
             </div>
           </div>
@@ -1037,6 +1108,65 @@
         </div>
       </div>
     </section>
+
+
+              <!-- Modal for Donation Details -->
+<div class="modal fade" id="donationModal" tabindex="-1" role="dialog" aria-labelledby="donationModalLabel" aria-hidden="true" style="z-index: 9999999;">
+  <div class="modal-dialog" role="document">
+      <div class="modal-content"  style="z-index: 99999999;">
+          <div class="modal-header">
+              <h5 class="modal-title" id="donationModalLabel"> <img src="./images/rsdflogo.png" width="30px" alt=""
+                /> <b>RSDF - </b> Making the world a Better Place</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+              </button>
+          </div>
+          <div class="modal-body">
+              <!-- Donation form -->
+              <form id="donationForm" >
+                  <div class="form-group">
+                      <label for="name"  style="z-index: 99999999;">Name</label>
+                      <input type="text" class="form-control" id="name" name="name" required>
+                  </div>
+                  <div class="form-group">
+                      <label for="email">Email</label>
+                      <input type="email" class="form-control" id="email" name="email" required>
+                  </div>
+                  <div class="form-group">
+                      <label for="amount">Donation Amount</label>
+                      <input type="text" class="form-control" id="amount" name="amount" required>
+                  </div>
+
+                  <!-- You can add more fields as needed -->
+              </form>
+          </div>
+          <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary" id="submitDonation">Submit</button>
+          </div>
+      </div>
+  </div>
+</div>
+
+<script>
+  // JavaScript to submit the donation form
+  document.getElementById('submitDonation').addEventListener('click', function() {
+      var formData = new FormData(document.getElementById('donationForm'));
+      var name = formData.get('name');
+      var amount = formData.get('amount');
+      var email = formData.get('email');
+
+      // Constructing a sympathetic message
+      var message = "Hi Dr. Roberto, my name is " + name + " Email: "+ email + ". I would like to donate " + amount + " to the organization to help make the world a better place for all. Could you kindly provide me with the account details or advise on how I may donate?\n\nThank you for the wonderful work you do!";
+      
+      // Replace this with your actual WhatsApp number
+      var whatsappNumber = "+244930731304";
+      var whatsappUrl = "https://api.whatsapp.com/send?phone=" + whatsappNumber + "&text=" + encodeURIComponent(message);
+      window.location.href = whatsappUrl;
+  });
+</script>
+
+
 
     <!-- end info_section -->
 
