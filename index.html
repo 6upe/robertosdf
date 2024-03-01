@@ -75,7 +75,7 @@
             <nav class="navbar navbar-expand-lg custom_nav-container">
               <a class="navbar-brand" href="index.html">
                 <span>
-                  <span 
+                  <span
                     ><img src="./images/rsdflogo.png" width="30px" alt=""
                   /></span>
 
@@ -245,11 +245,6 @@
               </div>
             </div>
           </div>
-
-
-
-
-
 
           <div class="container idicator_container">
             <ol class="carousel-indicators">
@@ -950,7 +945,7 @@
     <section id="contact" class="contact_section layout_padding">
       <div class="contact_bg_box">
         <div class="img-box">
-          <img src="images/contact-bg.jpg" alt="" />
+          <img src="images1/IMG-20240104-WA0051.jpg" alt="" />
         </div>
       </div>
       <div class="container">
@@ -1078,7 +1073,7 @@
               </a>
               <a href="" class="">
                 <i class="fa fa-envelope" aria-hidden="true"></i>
-                <span>info@robertosdf.org </span>
+                <span>info@robertosavedreams.org </span>
               </a>
             </div>
           </div>
@@ -1109,64 +1104,131 @@
       </div>
     </section>
 
-
-              <!-- Modal for Donation Details -->
-<div class="modal fade" id="donationModal" tabindex="-1" role="dialog" aria-labelledby="donationModalLabel" aria-hidden="true" style="z-index: 9999999;">
-  <div class="modal-dialog" role="document">
-      <div class="modal-content"  style="z-index: 99999999;">
+    <!-- Modal for Donation Details -->
+    <div
+      class="modal fade"
+      id="donationModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="donationModalLabel"
+      aria-hidden="true"
+      style="z-index: 9999999"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content" style="z-index: 99999999">
           <div class="modal-header">
-              <h5 class="modal-title" id="donationModalLabel"> <img src="./images/rsdflogo.png" width="30px" alt=""
-                /> <b>RSDF - </b> Making the world a Better Place</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-              </button>
+            
+            <h5 class="modal-title" id="donationModalLabel">
+              <img src="./images/rsdflogo.png" width="30px" alt="" />
+              <b>RSDF - Help us to reach our goals</b>
+
+              <br />
+              <br />
+              <center>
+                <small
+                  ><i>
+                    We are a dedicated group of individuals who are passionate
+                    about making a difference in the world. our mission is to
+                    raise funds and awareness for important causes & no profits
+                    that are working to improve the lives of those in need. we
+                    can make a positive impact on the world and create a
+                    brighter future for all.
+                  </i></small
+                >
+              </center>
+            </h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
           </div>
           <div class="modal-body">
-              <!-- Donation form -->
-              <form id="donationForm" >
-                  <div class="form-group">
-                      <label for="name"  style="z-index: 99999999;">Name</label>
-                      <input type="text" class="form-control" id="name" name="name" required>
-                  </div>
-                  <div class="form-group">
-                      <label for="email">Email</label>
-                      <input type="email" class="form-control" id="email" name="email" required>
-                  </div>
-                  <div class="form-group">
-                      <label for="amount">Donation Amount</label>
-                      <input type="text" class="form-control" id="amount" name="amount" required>
-                  </div>
+            <!-- Donation form -->
+            <form id="donationForm">
+              <div class="form-group">
+                <label for="name" style="z-index: 99999999">Name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="name"
+                  name="name"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="email"
+                  name="email"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="amount">Donation Amount</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="amount"
+                  name="amount"
+                  required
+                />
+              </div>
 
-                  <!-- You can add more fields as needed -->
-              </form>
+              <!-- You can add more fields as needed -->
+            </form>
           </div>
           <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-primary" id="submitDonation">Submit</button>
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-dismiss="modal"
+            >
+              Close
+            </button>
+            <button type="button" class="btn btn-primary" id="submitDonation">
+              Submit
+            </button>
           </div>
+        </div>
       </div>
-  </div>
-</div>
+    </div>
 
-<script>
-  // JavaScript to submit the donation form
-  document.getElementById('submitDonation').addEventListener('click', function() {
-      var formData = new FormData(document.getElementById('donationForm'));
-      var name = formData.get('name');
-      var amount = formData.get('amount');
-      var email = formData.get('email');
+    <script>
+      // JavaScript to submit the donation form
+      document
+        .getElementById("submitDonation")
+        .addEventListener("click", function () {
+          var formData = new FormData(document.getElementById("donationForm"));
+          var name = formData.get("name");
+          var amount = formData.get("amount");
+          var email = formData.get("email");
 
-      // Constructing a sympathetic message
-      var message = "Hi Dr. Roberto, my name is " + name + " Email: "+ email + ". I would like to donate " + amount + " to the organization to help make the world a better place for all. Could you kindly provide me with the account details or advise on how I may donate?\n\nThank you for the wonderful work you do!";
-      
-      // Replace this with your actual WhatsApp number
-      var whatsappNumber = "+244930731304";
-      var whatsappUrl = "https://api.whatsapp.com/send?phone=" + whatsappNumber + "&text=" + encodeURIComponent(message);
-      window.location.href = whatsappUrl;
-  });
-</script>
+          // Constructing a sympathetic message
+          var message =
+            "Hi Dr. Roberto, my name is " +
+            name +
+            " Email: " +
+            email +
+            ". I would like to donate " +
+            amount +
+            " to the organization to help make the world a better place for all. Could you kindly provide me with the account details or advise on how I may donate?\n\nThank you for the wonderful work you do!";
 
-
+          // Replace this with your actual WhatsApp number
+          var whatsappNumber = "+244930731304";
+          var whatsappUrl =
+            "https://api.whatsapp.com/send?phone=" +
+            whatsappNumber +
+            "&text=" +
+            encodeURIComponent(message);
+          window.location.href = whatsappUrl;
+        });
+    </script>
 
     <!-- end info_section -->
 
